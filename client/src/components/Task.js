@@ -3,7 +3,7 @@ import 'tailwindcss/base.css';
 import 'tailwindcss/components.css';
 import 'tailwindcss/utilities.css';
 
-const TodoList = () => {
+const Task = () => {
   const [tasks, setTasks] = useState([]);
 
   const handleAddTask = () => {
@@ -51,12 +51,4 @@ const TodoList = () => {
   );
 };
 
-function App() {
-  return (
-    <div className="App bg-gradient-to-r from-blue-800 to-blue-600 min-h-screen flex justify-center items-center">
-      <TodoList />
-    </div>
-  );
-}
-
-export default App;
+export default Task;
