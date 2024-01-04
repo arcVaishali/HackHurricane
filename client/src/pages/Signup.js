@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "../assets/image.jpg";
 import { useSpring, animated } from "@react-spring/web";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import Logo from "../assets/BackgroundRemovedLogo.png";
+
 const Signup = () => {
   const styles = useSpring({
     from: { y: 50, opacity: 0 },
@@ -14,26 +16,26 @@ const Signup = () => {
   });
   return (
     <>
-      <animated.div
-        className="z-20 text-5xl font-thin text-center mt-8"
-        style={{ fontFamily: "monospace", ...styles }}
+      {/* <animated.div
+        className="text-5xl font-bold text-center mt-8"
+        style={{ ...styles }}
       >
-        Hack Hurricane
-      </animated.div>
+        Stat Hub
+      </animated.div> */}
+
+
       <animated.div
         className="grid grid-cols-12 justify-between items-center"
         style={{ ...styles }}
       >
-        <animated.div
-          className="col-span-6 col-start-2 -mt-2"
-          style={{ ...stylesOnImage }}
-        >
-          <img className="w-128" src={Image} />
+        <animated.div className="col-span-8" style={{ ...stylesOnImage }}>
+          <img className="w-128 -mt-32" src={Image} />
         </animated.div>
         <animated.form
-          className="col-span-3 grid grid-rows-1 justify-center items-center bg-gradient-to-br from-[#f0f0f0] to-white rounded-md shadow-lg p-4 -mt-8"
+          className="col-span-3 grid grid-rows-1 justify-center items-center bg-gradient-to-br from-[#f0f0f0] to-white rounded-md shadow-xl p-4 -mt-8"
           style={{ ...styles }}
         >
+          <img className="w-16" src={Logo} />
           <div className="grid grid-rows-1 my-2">
             <label
               for="name"
@@ -111,7 +113,10 @@ const Signup = () => {
             <input type="file" className="text-[10px]" />
           </div>
 
-          <Link to="/login" className="text-center bg-gradient-to-tr from-[#60a5fa] to-[#1e3a8a] p-2 m-2 rounded-full text-white uppercase">
+          <Link
+            to="/login"
+            className="text-center bg-gradient-to-tr from-[#60a5fa] to-[#1e3a8a] p-2 m-2 rounded-full text-white uppercase"
+          >
             Signup
           </Link>
         </animated.form>

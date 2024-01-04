@@ -1,11 +1,14 @@
 import React from 'react';
+import Logo from "../assets/BackgroundRemovedLogo.png"
 
 const Navbar = () => {
   return (
     <nav className="bg-gray-100 p-4">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <a href="/" className="text-xl font-bold text-gray-800">Navbar</a>
+          <a href="/" className="text-xl font-bold text-gray-800">
+            <img src={Logo} width={50}/>
+          </a>
           <ul className="flex space-x-4">
             <li className="nav-item">
               <a href="/" className="nav-link active">Home</a>

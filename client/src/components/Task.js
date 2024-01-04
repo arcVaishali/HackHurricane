@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
-import 'tailwindcss/base.css';
-import 'tailwindcss/components.css';
-import 'tailwindcss/utilities.css';
+import React, { useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
+import "tailwindcss/base.css";
+import "tailwindcss/components.css";
+import "tailwindcss/utilities.css";
 
 const Task = () => {
+  const styles = useSpring({
+    from: { y: 50, opacity: 0 },
+    to: { y: 0, opacity: 1 },
+  });
+
   const [tasks, setTasks] = useState([]);
 
   const handleAddTask = () => {
     const newTask = {
-      day: prompt('Enter day:'),
-      date: prompt('Enter date:'),
+      day: prompt("Enter day:"),
+      date: prompt("Enter date:"),
       completed: false,
     };
 
@@ -23,20 +29,24 @@ const Task = () => {
   };
 
   return (
-
-    <div className="text-white text-center">
-      <h1 className="text-4xl font-bold text-#ADD8E6 -800 mb-8">Todo List</h1>
+    <div className="p-16">
+      <animated.div
+        className="col-span-12 grid grid-cols-12 justify-between items-start text-center text-black text-5xl font-bold capitalize my-8 p-4 border-b-[1px] border-gray-300"
+        style={{ ...styles }}
+      >
+        <div className="col-span-10">TODO</div>
       <button
-        className="bg-blue-500 hover:bg-#ADD8E6 text-white font-bold py-2 px-4 rounded"
+        className="bg-gradient-to-tr from-blue-400 to-blue-900 text-sm hover:bg-#ADD8E6 text-white font-bold py-2 px-4 rounded mb-8 col-span-2"
         onClick={handleAddTask}
       >
         Add Task
       </button>
-      <ul className="list-none p-0">
+      </animated.div>
+      <ul className="list-none">
         {tasks.map((task, index) => (
           <li
             key={index}
-            className="bg-gradient-to-r from-blue-800 to-blue-600 p-4 mb-4 rounded shadow-md transition-transform duration-300 hover:scale-105"
+            className="bg-gradient-to-tr from-blue-400 to-blue-900 p-4 mb-4 rounded shadow-md transition-all hover:bg-transparent hover:text-blue duration-200 delay-150 text-white"
           >
             <input
               type="checkbox"
