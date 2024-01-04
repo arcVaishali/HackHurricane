@@ -36,7 +36,7 @@ const Task = () => {
       >
         <div className="col-span-10">TODO</div>
       <button
-        className="bg-blue-500 text-sm hover:bg-#ADD8E6 text-white font-bold py-2 px-4 rounded mb-8 col-span-2"
+        className="bg-gradient-to-tr from-blue-400 to-blue-900 text-sm hover:bg-#ADD8E6 text-white font-bold py-2 px-4 rounded mb-8 col-span-2"
         onClick={handleAddTask}
       >
         Add Task
@@ -46,7 +46,7 @@ const Task = () => {
         {tasks.map((task, index) => (
           <li
             key={index}
-            className="bg-gradient-to-r from-blue-800 to-blue-600 p-4 mb-4 rounded shadow-md transition-all hover:bg-transparent hover:text-blue duration-200 delay-150"
+            className="bg-gradient-to-tr from-blue-400 to-blue-900 p-4 mb-4 rounded shadow-md transition-all hover:bg-transparent hover:text-blue duration-200 delay-150 text-white"
           >
             <input
               type="checkbox"
