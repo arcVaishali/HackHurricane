@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import About from "./About";
 import Leetcode from "./Leetcode/Leetcode";
 import Github from "./GitHub/Github";
@@ -88,14 +89,14 @@ const Sidebar = () => {
                     </ul>
                   </li>
                   <li>
-                    <a
-                      href="#submenu3"
-                      data-bs-toggle="collapse"
+                    <Link
+                      to="/challenges"
+                    //   data-bs-toggle="collapse"
                       class="nav-link px-0 align-middle"
                     >
                       <i class="fs-4 bi-grid"></i>{" "}
                       <span class="ms-1 d-none d-sm-inline">Challenges</span>{" "}
-                    </a>
+                    </Link>
                     <ul
                       class="collapse nav flex-column ms-1"
                       id="submenu3"
