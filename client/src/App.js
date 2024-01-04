@@ -7,6 +7,7 @@ import UserDashboard from "./pages/UserDashboard";
 import Links from "./components/Links";
 import About from "./components/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ActiveChallenges from "./components/ActiveChallanges";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/user" element={<UserDashboard />}></Route>
         <Route path="/links" element={<Links />}></Route>
-        <Route path="/" element={<About />}></Route>
-
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/" element={<ActiveChallenges />}></Route>
 
       </Routes>
     </BrowserRouter>
