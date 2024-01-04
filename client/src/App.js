@@ -9,6 +9,7 @@ import About from "./components/About";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ActiveChallenges from "./components/ActiveChallanges";
+import Sidebar from "./components/Sidebar";
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
         <Route path="/user" element={<UserDashboard />}></Route>
         <Route path="/links" element={<Links />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/" element={<Navbar />}></Route>
+        <Route path="/nav" element={<Navbar />}></Route>
+        <Route path="/" element={<Sidebar />}></Route>
         <Route path="/challanges" element={<ActiveChallenges />}></Route>
         
 
