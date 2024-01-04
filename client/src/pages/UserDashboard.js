@@ -1,7 +1,7 @@
 import React from "react";
-import Github from "../components/GitHub/Github";
-import Leetcode from "../components/Leetcode/Leetcode";
-import Quotes from "../components/Quotes/Quotes"
+import Github from "../components/Github";
+import Leetcode from "../components/Leetcode";
+import Quotes from "../components/Quotes";
 
 const UserDashboard = () => {
   return (
