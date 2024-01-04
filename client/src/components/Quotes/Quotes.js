@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './Header'
 
 const Quotes = () => {
   return (
-    <div>Quotes</div>
+    <div>
+      <Header/>
+    </div>
   )
 }
 
