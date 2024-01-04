@@ -2,6 +2,8 @@ import React from "react";
 import Image from "../assets/illustration.jpg";
 import { useSpring, animated } from "@react-spring/web";
 import {Link} from "react-router-dom"
+import Logo from "../assets/BackgroundRemovedLogo.png";
+
 
 const Login = () => {
   const styles = useSpring({
@@ -19,7 +21,7 @@ const Login = () => {
         className="z-20 text-5xl font-thin text-center mt-8"
         style={{ fontFamily: "monospace", ...styles }}
       >
-        Hack Hurricane
+        Stat Hub
       </animated.div>
       <animated.div
         className="grid grid-cols-12 justify-between items-center"
@@ -35,6 +37,7 @@ const Login = () => {
           className="col-span-3 grid grid-rows-1 justify-center items-center bg-gradient-to-br from-[#f0f0f0] to-white rounded-md shadow-lg p-4 -mt-[50px]"
           style={{ ...styles }}
         >
+          <img className="w-16" src={Logo} />
           <div className="grid grid-rows-1 my-2">
             <label
               for="username"

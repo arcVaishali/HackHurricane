@@ -13,14 +13,14 @@ const UserDashboard = () => {
   return (
     <>
       <Navbar/>
-      {/* <Sidebar/> */}
-      <About/>
+      <Sidebar/>
+      {/* <About/>
       <Github />
       <Leetcode />
       <Links/>
       <Timer/>
       <Task/>
-      <Quotes />
+      <Quotes /> */}
     </>
   );
 };
